@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Coming Soon</title>
+		<style>
+			@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Pacifico');
+			@keyframes background {
+				from { background-color: rgba(100%, 0%, 0%, 0.25); }
+				33% { background-color: rgba(0%, 100%, 0%, 0.25); }
+				66% { background-color: rgba(0%, 0%, 100%, 0.25); }
+				to { background-color: rgba(100%, 0%, 0%, 0.25); }
+			}
+			@keyframes hover {
+				from { transform: translate(0,-16px);}
+				to { transform: translate(0,16px);}
+			}
+			body {
+				padding: 0;
+				margin: 0;
+				min-height: 100vh;
+				animation-name: background;
+				animation-duration: 30s;
+				animation-iteration-count: infinite;
+				animation-timing-function: linear;
+			}
+			#wrapper {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: space-between;
+				min-height: 100vh;
+			}
+			#comingsoon {
+				font-family: 'Pacifico', cursive;
+				font-size: 6em;
+				text-shadow: 2px 2px #ff0000;
+				animation-name: hover;
+				animation-duration: 8s;
+				animation-iteration-count: infinite;
+				animation-direction: alternate;
+				animation-timing-function: ease-in-out;
+				transition: text-shadow 1s, transform 1s;
+			}
+			#comingsoon:hover {
+				text-shadow: 8px 8px 0 #ff0000;
+				transform: scale(2, 2);
+			}
+			#footer {
+				align-self: flex-end;
+				font-family: 'Open Sans', sans-serif;
+				font-weight: 300;
+				font-size: 0.9em;
+				color: black;
+				margin: 1vh 1vw;
+			}
+			#footer > a {
+				display: inline-block;
+				text-decoration: none;
+				color: black;
+				transform: translate(0, 0);
+				opacity: 0.8;
+				transition: transform 0.5s, opacity 0.5s;
+			}
+			#footer > a:hover {
+				opacity: 1;
+				transform: translate(0, -4px);
+			}
+		</style>
+	</head>
+	<body>
+		<div id="wrapper">
+			<section>
+				<!--empty header-->
+			</section>
+			<section id="comingsoon">
+				<span>Coming Soon</span>
+			</section>
+			<section id="footer">
+			</section>
+		</div>
+	</body>
+</html>
